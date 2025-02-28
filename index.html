@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumizo Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        header {
+            background-color:  #fc9b25; /* Company color */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .logo {
+            width: 550px; /* Adjust size as needed */
+        }
+        h1 {
+            margin: 10px 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+           // background: white;
+            border-radius: 8px;
+           // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		 text-align: center;
+		color: #64605b;
+
+
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #fc9b25;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: white;
+            color:#fc9b25;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #fc9b25;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #documents {
+            display: none;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="./ss.png" alt="Lumizo Logo" class="logo">
+   
+</header>
+
+<div class="container"> <br>
+    <h1>System Documentation</h1><br>
+    <h2>Select a Category</h2>
+    <a href="#" class="button" onclick="showDepartment('inventory')">Inventory</a>
+    <a href="#" class="button" onclick="showDepartment('accounting')">Accounting</a>
+    <a href="#" class="button" onclick="showDepartment('reporting')">Reporting</a>
+    <a href="#" class="button" onclick="showDepartment('admin')">Admin</a>
+
+    <div id="documents">
+        <h2>Documents</h2>
+        <ul id="docList"></ul>
+    </div>
+</div>
+
+<footer>
+    &copy; 2024 Lumizo. All rights reserved.
+</footer>
+
+<script>
+    const documents = {
+        accounting: [
+            { name: "Accounting System Case study", url: "https://www.canva.com/design/DAGS9zx-UWo/dmcaz-o4zMhsbbQUOi-jrw/view?utm_content=DAGS9zx-UWo&utm_campaign=designshare&utm_medium=link&utm_source=editor" },
+	    { name: "Bank Transactions", url: "https://docs.google.com/document/d/15nvGhzE8sfcRYg_aGSNElLP_MLSnItathfpK6gF6zAs/edit?usp=sharing" }
+		
+        ],
+        inventory: [
+            { name: "Inventory System case study", url: "https://www.canva.com/design/DAGTEzsOJ8g/62DK4eZ5IBQvKabg7WJz7A/view?utm_content=DAGTEzsOJ8g&utm_campaign=designshare&utm_medium=link&utm_source=editor" },
+	    { name: "Bar-code printing system case study", url: "https://www.canva.com/design/DAGUSNy97fs/iZjIJKdEUaFMnjJuUdQo9Q/view?utm_content=DAGUSNy97fs&utm_campaign=designshare&utm_medium=link&utm_source=editor" },
+	    { name: "Stock Counting and Recycling Process", url: "https://docs.google.com/document/d/1GjFEgck-KGwkqC2UsRcyl8P9Lg0peNII6iip7ckQJII/edit?usp=sharing" },
+	    { name: "Re-Order level", url: "https://docs.google.com/document/d/1tDShLe-_s8aqej1wGja9tghPDoJn9_jwo08pArD5yp4/edit?usp=sharing" }
+	     
+        
+        ],
+	 reporting: [
+           { name: "Net Sale Template Explanation", url: "./Net Sale (1).pdf" },
+	    { name: "System Audit Process", url: "https://docs.google.com/document/d/1Hsy6TV4vVYxtxJAiiTp3dTgMvZuUZLZRGZtoqNyrn3o/edit?usp=sharing" },
+	   { name: "Monthly Projects Sales Analysis Report Steps", url: "https://docs.google.com/document/d/1LcXmh_feO6HOkD7nuKmMv7XxoWuIxzEEN_x5Maznxfg/edit?usp=sharing" },
+	    { name: "Image Uploading Process", url: "https://docs.google.com/document/d/15NvCD__-hTZeLzdRUCpXchBojA80HFiZSpkGF8AKGng/edit?usp=sharing" }
+		
+	],
+
+	admin: [
+           { name: "Ledger Management", url: "https://www.canva.com/design/DAGUYtjkf7I/hO_TZehH5ssWhxKGXd_x4A/view?utm_content=DAGUYtjkf7I&utm_campaign=designshare&utm_medium=link&utm_source=editor" },
+	   { name: "Internal Process", url: "https://docs.google.com/document/d/1INhKAwLYM8gmkXfMT2Pm8nMKp3oJ1xcNJBnltVAjq_A/edit?usp=sharing" },
+	   { name: "busy system explanation", url: "./busy_courseware.pdf" }
+	   
+	]
+
+    };
+
+    function showDepartment(department) {
+        const docList = document.getElementById("docList");
+        docList.innerHTML = ""; // Clear previous entries
+
+        documents[department].forEach(doc => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="${doc.url}" target="_blank">${doc.name}</a>`;
+            docList.appendChild(li);
+        });
+        
+        document.getElementById("documents").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
