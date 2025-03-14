@@ -1,0 +1,240 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+   margin-bottom: 2%;
+}
+
+.navbar{
+    text-align: center;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon{
+    padding: 20px;
+    float: left;
+}
+.logo {
+    width: 200px;  
+}
+.logo-container{
+    display: flex;
+    width: 700;
+
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+#lumizo-logo {
+    width: 200px;
+    position: relative;
+    /* opacity: 0; */
+    transform: translateX(50px); /* Move right initially */
+}
+#apostrophe {
+    font-size: 40px;
+    /* opacity: 0; */
+}
+
+h4 {
+  
+    filter: blur(10px);
+}
+.s{
+    font-size: 4rem;
+    letter-spacing: 20px;
+    font-weight: 400;
+     font-family: serif;
+}
+.container {
+    display:flex ;
+    gap: 40px; 
+    width: 100%; 
+    max-width: 400px;
+    margin-top: 20px;
+    width: 100%;
+    flex-direction: column;
+
+}
+.button {
+    display: block;
+    text-decoration: none;
+    background: #f39c12;
+    color: rgb(10, 0, 0);
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.button:hover {
+    background-color:#fc9b2500;
+    color: white;
+} 
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #fc9b25;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.home {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    text-align: center;     
+    margin-top: 6%;
+}
+
+.header {
+    padding-top: 20px;
+    padding-left: 250px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    color: rgb(0, 0, 0);
+
+    position: relative;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
+    
+/* .logo-container {
+    font-size: 6rem;
+    font-weight: 800;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    text-align: center;
+    /* font-style:oblique; */
+} 
+
+.header h4 {
+    width: 800px;
+    font-size: 20px;
+    margin-top: 10px;
+    /* opacity: 0; */
+}
+ .header h2{
+    font-size: 2rem;
+    font-family: serif;
+    margin: 10px 0 10px 0;
+    font-weight: 400;
+    letter-spacing: 25px;
+    text-align: center;
+    /* padding-left: 50px; */
+    /* padding-top: 70px; */
+    /* opacity: 0; */
+}
+
+.bodycontent {
+    display: flex;
+    justify-content:left;
+    padding-left: 20%;  
+    align-items: center;      
+    text-align: center;     
+    margin-top: 4%;
+}
+
+.subhead h2 {
+   text-align: left;
+   margin-bottom: 20px; 
+   font-size: 200%;
+   font-family: serif;
+   margin: 10px 0 10px 0;
+}
+.subhead h1 {
+    text-align:center;
+    margin-bottom: 10px;
+    font-size: 40px; 
+ }
+
+.subhead ul {
+    list-style-type: none;
+    padding: 0;
+    gap: 40px;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    justify-content:left; /* Centers the cards */
+    margin-bottom: 30px;
+}
+
+.subhead ul li {
+    width: 200px; /* Set card width */
+    height: 150px; /* Set card height */
+    /* background: url('./img/card-bg.jpg') no-repeat center center; Add your background image */
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+   
+}
+
+    .subhead ul li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        color: white;
+        font-size: large;
+        font-weight: bold;
+        text-decoration: none;
+        background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .subhead ul li:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    #mainContent {
+        text-align: center;
+        /* opacity: 0;  */
+    }
+    #mainContent-1 {
+        text-align: center;
+        opacity: 0; 
+    }
+    .chan {
+        width: 30px; /* Start small */
+        filter: blur(10px);
+        opacity: 0;
+        animation: revealImage 1.5s ease-out forwards;
+      }
+      
+      @keyframes revealImage {
+        0% {
+          width: 400px;
+          filter: blur(10px);
+          opacity: 0;
+        }
+        100% {
+          width: 400px; /* Final size */
+          filter: blur(0);
+          opacity: 1;
+        }
+      }
+      
