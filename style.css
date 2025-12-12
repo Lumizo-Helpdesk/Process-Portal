@@ -224,7 +224,7 @@ footer {
         opacity: 0;
         animation: revealImage 1.5s ease-out forwards;
       }
-      
+     
       @keyframes revealImage {
         0% {
           width: 400px;
